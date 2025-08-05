@@ -13,15 +13,22 @@
 >   corresponding outputs. *Note: the Fortran workflow is access-restricted to NOAA/NOS users.*
 >
 > - This script consumes:
->   - The **Python package outputs** (both `control_files/` and `data/` for nowcast/forecast), and
->   - The **Fortran outputs** (WL/CU/Salt/Temp tables and raw WL time series),
->   and then performs datum alignment, table normalization, statistical equivalence testing, and
+>   - The **Python package outputs** (both `control_files/` and `data/` for nowcast/forecast)
+>   - The **Fortran outputs** (WL/CU/Salt/Temp tables and raw WL time series)
+>   
+>   It then performs datum alignment, table normalization, statistical equivalence testing, and
 >   agreement checks between the two workflows.
 >
 > - Folder names and file expectations are documented below in **Folder Layout & Required Inputs**.
 >
 > If you have not yet run the NOS package linked above, please do that first. Those outputs are the
 > required inputs for the comparisons performed here.
+> 
+> **No access to both outputs?** You can still explore results. This repository includes example
+> comparison workbooks and time series plots generated from both workflows so you can review the methodology
+> and expected outputs without running the restricted Fortran package. Included results detail
+> comparisons for cbofs from Jan-Jun 2024 and dbofs in Jan 2024. 
+
 
 
 
@@ -216,3 +223,4 @@ Interactive prompts will guide you through OFS, date window, datum, and which op
 | Plot folders created but are empty | The `build_file_index()` regex didn’t match your file naming scheme. Confirm filenames contain `_{OFS_ABBR}_nowcast.dat` / `forecast.dat` or tweak the pattern. |
 | Workbook shows “equivalent = NO” everywhere | Python and Fortran date windows don’t overlap. Check `start` / `end` prompts. |
 | `ValueError: datum not supported` | User entered datum not in `DATUM_VAR`. The accepted list is printed in the prompt. |
+

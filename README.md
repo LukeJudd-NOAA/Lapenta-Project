@@ -196,6 +196,14 @@ python AnalysisScript.py
 ```
 Interactive prompts will guide you through OFS, date window, datum, and which optional modules to run.
 
+
+## Example Results (browse/download)
+You will need to download the raw html file to view any time series plots, as they are interactively generated with plotly. 
+
+- [`results/cbofs/`](results/cbofs/) — workbook + plots for CBOFS (2024)
+- [`results/dbofs/`](results/dbofs/) — workbook + plots for DBOFS (2024)
+
+
 ## Output Format
 
 |                     |                                           |
@@ -227,5 +235,6 @@ Interactive prompts will guide you through OFS, date window, datum, and which op
 | Plot folders created but are empty | The `build_file_index()` regex didn’t match your file naming scheme. Confirm filenames contain `_{OFS_ABBR}_nowcast.dat` / `forecast.dat` or tweak the pattern. |
 | Workbook shows “equivalent = NO” everywhere | Python and Fortran date windows don’t overlap. Check `start` / `end` prompts. |
 | `ValueError: datum not supported` | User entered datum not in `DATUM_VAR`. The accepted list is printed in the prompt. |
+
 
 

@@ -1,0 +1,5 @@
+# Treat result artifacts as generated so they don't count toward language stats
+results/**/plots/**        linguist-generated
+results/**/bode/**         linguist-generated
+results/**/fortran_csv/**  linguist-generated
+results/**/*.html          linguist-generated

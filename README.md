@@ -31,7 +31,9 @@
 > **No access to both outputs?** You can still explore results. This repository includes example
 > comparison workbooks and time series plots generated from both workflows so you can review the methodology
 > and expected outputs without running the restricted Fortran package. Included results detail
-> comparisons for cbofs from Jan-Jun 2024 and dbofs in Jan 2024. 
+> comparisons for cbofs from Jan-Jun 2024 and dbofs in Jan 2024.
+>
+> Please see the abstract and presentation files for a summary of this project.
 
 
 
@@ -235,6 +237,7 @@ You will need to download the raw html file to view any time series plots, as th
 | Plot folders created but are empty | The `build_file_index()` regex didn’t match your file naming scheme. Confirm filenames contain `_{OFS_ABBR}_nowcast.dat` / `forecast.dat` or tweak the pattern. |
 | Workbook shows “equivalent = NO” everywhere | Python and Fortran date windows don’t overlap. Check `start` / `end` prompts. |
 | `ValueError: datum not supported` | User entered datum not in `DATUM_VAR`. The accepted list is printed in the prompt. |
+
 
 
 

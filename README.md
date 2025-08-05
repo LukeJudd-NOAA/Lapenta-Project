@@ -6,15 +6,19 @@
 > modern Python workflow reproduces the legacy Fortran results.
 >
 > - Start with the NOS package under active development:
->   **Next-Gen NOS OFS Skill Assessment** — https://github.com/NOAA-CO-OPS/Next-Gen-NOS-OFS-Skill-Assessment  
->   Run that repository end-to-end for your target OFS and date window.
+>   **Next-Gen NOS OFS Skill Assessment** — https://github.com/NOAA-CO-OPS/Next-Gen-NOS-OFS-Skill-Assessment
+>   
+>   This package contains important background for understanding what this script does. Please default to that repository for any and all questions regarding the Python skill assessment software.  
+>   -Run that repository end-to-end for your target OFS and date window.
 >
 > - (If you have access) also run the **legacy Fortran skill-assessment package** to produce its
 >   corresponding outputs. *Note: the Fortran workflow is access-restricted to NOAA/NOS users.*
+>   
+>   Repository for the legacy/operational package: https://github.com/NOAA-CO-OPS/NOS-OFS-Skill-Assessment-Code
 >
 > - This script consumes:
 >   - The **Python package outputs** (both `control_files/` and `data/` for nowcast/forecast)
->   - The **Fortran outputs** (WL/CU/Salt/Temp tables and raw WL time series)
+>   - The **Fortran outputs** (WL/CU/Salt/Temp tables and raw time series)
 >   
 >   It then performs datum alignment, table normalization, statistical equivalence testing, and
 >   agreement checks between the two workflows.
@@ -223,4 +227,5 @@ Interactive prompts will guide you through OFS, date window, datum, and which op
 | Plot folders created but are empty | The `build_file_index()` regex didn’t match your file naming scheme. Confirm filenames contain `_{OFS_ABBR}_nowcast.dat` / `forecast.dat` or tweak the pattern. |
 | Workbook shows “equivalent = NO” everywhere | Python and Fortran date windows don’t overlap. Check `start` / `end` prompts. |
 | `ValueError: datum not supported` | User entered datum not in `DATUM_VAR`. The accepted list is printed in the prompt. |
+
 

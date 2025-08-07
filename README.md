@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> **Before you begin:
+> **Before you begin:**
 >
 > This repository is **not** a replacement for the NOS skill-assessment workflow. It is an
 > **equivalence checker** that consumes outputs from the official packages and verifies that the

@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> **Before you begin — upstream package & prerequisites**
+> **Before you begin:
 >
 > This repository is **not** a replacement for the NOS skill-assessment workflow. It is an
 > **equivalence checker** that consumes outputs from the official packages and verifies that the
@@ -261,6 +261,7 @@ You will need to download the raw html file to view any time series plots, as th
 | Plot folders created but are empty | The `build_file_index()` regex didn’t match your file naming scheme. Confirm filenames contain `_{OFS_ABBR}_nowcast.dat` / `forecast.dat` or tweak the pattern. |
 | Workbook shows “equivalent = NO” everywhere | Python and Fortran date windows don’t overlap. Check `start` / `end` prompts. |
 | `ValueError: datum not supported` | User entered datum not in `DATUM_VAR`. The accepted list is printed in the prompt. |
+
 
 
 
